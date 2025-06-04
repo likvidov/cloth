@@ -151,6 +151,11 @@ body {
     margin-top: 3px;
     font-family: 'Gilroy Semibold';
     font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.header__btn:hover {
+    background-color: #335bd5;
 }
 
 .header__nav {
@@ -676,6 +681,7 @@ body {
 
     .header__logo {
         margin-bottom: 25px;
+        margin-right: 0;
     }
 
     .header__address {
