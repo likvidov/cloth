@@ -558,6 +558,12 @@ body {
     color: #000;
 }
 
+@media (max-width: 1800px) {
+    .footer__socials:after {
+        display: none;
+    }
+}
+
 @media (max-width: 1440px) {
     .header__main .container {
         padding-top: 50px;
@@ -575,10 +581,6 @@ body {
 
     .header__main::before {
         min-height: 0;
-    }
-
-    .footer__socials::after {
-        display: none;
     }
 }
 
