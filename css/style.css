@@ -1,9 +1,61 @@
 @import "reset.css";
 
-:root {}
+@font-face {
+    font-family: 'Gilroy Regular';
+    src: url('../fonts/Gilroy-Regular.eot');
+    src: url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Regular.woff') format('woff'),
+        url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Semibold';
+    src: url('../fonts/Gilroy-SemiBold.eot');
+    src: url('../fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-SemiBold.woff') format('woff'),
+        url('../fonts/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Medium';
+    src: url('../fonts/Gilroy-Medium.eot');
+    src: url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url('../fonts/Gilroy-Bold.eot');
+    src: url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Bold.woff') format('woff'),
+        url('../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ModBolda Alterna';
+    src: url('../fonts/modbolda_alterna_bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MYRIADPRO-REGULAR';
+    src: url('../fonts/MYRIADPRO-REGULAR.OTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Gilroy Regular';
     font-weight: normal;
     font-size: 15px;
 }
@@ -14,12 +66,14 @@ body {
     margin: 0 auto;
 }
 
-.title {}
+.title {
+    font-family: 'Gilroy Semibold';
+}
 
 .header {}
 
 .header__top {
-    padding: 25px 0 20px 0;
+    padding: 28px 0 16px 0;
     background-color: #f6f6f6;
 }
 
@@ -29,7 +83,9 @@ body {
     justify-content: space-between;
 }
 
-.header__logo {}
+.header__logo {
+    margin-right: 136px;
+}
 
 .header-logo__img {}
 
@@ -53,6 +109,7 @@ body {
 .header__social {
     display: flex;
     align-items: center;
+    margin-left: -10px;
 }
 
 .fab {
@@ -76,25 +133,31 @@ body {
 .header-social__number {
     font-size: 20px;
     color: #000;
+    font-family: 'Gilroy Bold';
 }
 
 .header__btn {
     text-transform: uppercase;
     color: #FFF;
     padding: 17px 45px;
-    background-color: #0436c4;
+    background-color: #0932b8;
     border-radius: 30px;
     margin-top: 3px;
+    font-family: 'Gilroy Semibold';
+    font-size: 16px;
 }
 
 .header__nav {
     padding: 13px 0;
     background-color: #335bd5;
+    font-family: 'Gilroy Medium';
 }
 
 .header-nav__menu {
     display: flex;
     justify-content: space-around;
+    max-width: 1071px;
+    margin: 0 auto;
 }
 
 .header-nav__menu li a {
@@ -110,7 +173,7 @@ body {
 .header__main::before {
     content: ' ';
     position: absolute;
-    top: -64px;
+    top: 50px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -125,21 +188,45 @@ body {
 }
 
 .header__main .container {
-    padding-left: 48px;
-    padding-top: 60px;
+    padding-left: 34px;
+    padding-top: 64px;
 }
 
 .header-main__title {
-    max-width: 452px;
-    margin-bottom: 85px;
+    max-width: 600px;
+    margin-bottom: 55px;
+    text-transform: uppercase;
+    font-family: 'ModBolda Alterna';
+    line-height: 61px;
+
+    background: linear-gradient(135deg,
+            #1c248e 0%,
+            #0039cc 33%,
+            #1c248e 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-size: 57.53px;
+}
+
+.header-main__title span {
+    font-size: 86.46px;
+    display: block;
+    margin-top: 16px;
+    line-height: 77.82px;
 }
 
 .header-main__description {
     font-size: 22px;
+    font-family: 'MYRIADPRO-REGULAR';
+    text-transform: uppercase;
+    margin-left: 4px;
 }
 
 .hero {
-    padding-top: 68px;
+    padding-top: 67px;
 }
 
 .hero .container {
@@ -167,7 +254,10 @@ body {
     left: 10px;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #6c63ff, #00d4ff);
+    background: linear-gradient(135deg,
+            rgb(28, 36, 142) 0%,
+            rgb(135, 157, 223) 33%,
+            rgb(0, 57, 204) 100%);
     z-index: -1;
     border-radius: 4px;
 }
@@ -179,21 +269,23 @@ body {
 .hero__title {
     font-size: 30px;
     margin-top: -4px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-transform: uppercase;
-    letter-spacing: -1.5px;
+    line-height: auto;
 }
 
 .hero__description {}
 
-.hero-description__p {}
+.hero-description__p {
+    margin-bottom: 1px;
+}
 
 .hero-description__p:last-child {
-    margin-top: 36px;
+    margin-top: 16px;
 }
 
 .about-product {
-    padding-top: 45px;
+    padding-top: 44px;
 }
 
 .about-product__title {
@@ -208,7 +300,7 @@ body {
 }
 
 .about-product__description {
-    max-width: 75%;
+    max-width: 83%;
 }
 
 .about-product__items {
@@ -218,6 +310,7 @@ body {
 }
 
 .about-product__item {
+    font-family: 'Gilroy Semibold';
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,26 +323,26 @@ body {
 }
 
 .advantages {
-    padding-top: 50px;
+    padding-top: 52px;
+    padding-bottom: 87px;
 }
 
 .advantages__title {
     text-align: center;
     text-transform: uppercase;
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 58px;
 }
 
 .advantages__items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .advantages__item {
-    flex: 0 0 calc(33.333% - 70px);
-    margin-right: 70px;
-    margin-bottom: 100px;
+    flex: 0 0 calc(33.333%);
+    margin-bottom: 15px;
     text-align: center;
     justify-items: center;
 }
@@ -259,30 +352,43 @@ body {
 }
 
 .advantages-item__img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 12px solid #191734;
-    background: #f8f8f8;
+    background: radial-gradient(circle at center, #f0f0f0 40%, #dcdcdc 100%);
+    box-shadow:
+        inset 0 0 10px rgba(0, 0, 0, 0.2),
+        0 0 0 10px #0c0c61,
+        0 0 0 12px white;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
+    margin-bottom: 11px;
+    transition: transform 0.2s ease;
+}
+
+.advantages-item__img:hover {
+    transform: scale(1.05);
 }
 
 .advantages-item__img img {
-    width: 85%;
-    height: 85%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: none;
     border-radius: 50%;
     background-color: #eaeaea;
+    filter: brightness(1);
+    transition: filter 0.2s ease;
+}
+
+.advantages-item__img img:hover {
+    filter: brightness(0.8);
 }
 
 .avantages-item__title {
     font-size: 24px;
     margin-bottom: 15px;
-    font-weight: bold;
+    font-family: 'Gilroy Semibold';
 }
 
 .advantages-item__description {
@@ -292,7 +398,7 @@ body {
 .about {
     background-image: url(../img/about-bg.png);
     min-height: 547px;
-    padding-top: 50px;
+    padding-top: 42px;
 }
 
 .about__title {
@@ -304,6 +410,7 @@ body {
 }
 
 .about__description {
+    font-family: 'Gilroy Medium';
     text-align: center;
     color: #fff;
     font-size: 22px;
@@ -314,21 +421,22 @@ body {
 }
 
 .news {
-    padding-top: 65px;
-    margin-bottom: 65px;
+    padding-top: 58px;
+    margin-bottom: 103px;
 }
 
 .news__title {
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 75px;
+    font-family: 'Gilroy Semibold';
 }
 
 .news__items {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: space-around;
 }
 
 .news__item {
@@ -336,7 +444,7 @@ body {
 }
 
 .news-item__img {
-    margin-bottom: 10px;
+    margin-bottom: 21px;
 }
 
 .news-item__title {
@@ -349,6 +457,7 @@ body {
     margin-bottom: 10px;
     color: #1c248e;
     font-size: 14px;
+    font-family: 'Gilroy Medium';
 }
 
 .news-item__description {
@@ -377,6 +486,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     position: relative;
+    margin-left: 104px;
 }
 
 .footer__socials::after {
@@ -386,11 +496,12 @@ body {
     width: 100%;
     background-repeat: no-repeat;
     position: absolute;
-    background-position: right+50px center;
+    background-position: right+32px center;
 }
 
 .footer__social {
     font-size: 24px;
+    font-family: 'Gilroy Medium';
 }
 
 .footer__social::before {
