@@ -8,6 +8,7 @@
         url('../fonts/Gilroy-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -18,6 +19,7 @@
         url('../fonts/Gilroy-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -28,6 +30,7 @@
         url('../fonts/Gilroy-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -38,6 +41,7 @@
         url('../fonts/Gilroy-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -45,6 +49,7 @@
     src: url('../fonts/modbolda_alterna_bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -52,6 +57,7 @@
     src: url('../fonts/MYRIADPRO-REGULAR.OTF') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 body {
@@ -158,6 +164,9 @@ body {
     justify-content: space-around;
     max-width: 1071px;
     margin: 0 auto;
+    flex-wrap: wrap;
+    color: #fff;
+    font-size: 20px;
 }
 
 .header-nav__menu li a {
@@ -165,25 +174,30 @@ body {
     font-size: 20px;
 }
 
+.header-nav__menu li a:hover {
+    color: #1c248e;
+}
+
 .header__main {
-    min-height: 485px;
     font-size: 57px;
+    position: relative;
 }
 
 .header__main::before {
     content: ' ';
     position: absolute;
-    top: 50px;
+    top: 0px;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
+    min-height: 483px;
     z-index: -1;
     background-image: url(../img/header__bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     transform: scaleX(-1);
 }
 
@@ -226,7 +240,7 @@ body {
 }
 
 .hero {
-    padding-top: 67px;
+    padding-top: 112px;
 }
 
 .hero .container {
@@ -271,7 +285,6 @@ body {
     margin-top: -4px;
     margin-bottom: 8px;
     text-transform: uppercase;
-    line-height: auto;
 }
 
 .hero__description {}
@@ -324,7 +337,7 @@ body {
 
 .advantages {
     padding-top: 52px;
-    padding-bottom: 87px;
+    padding-bottom: 128px;
 }
 
 .advantages__title {
@@ -385,7 +398,7 @@ body {
     filter: brightness(0.8);
 }
 
-.avantages-item__title {
+.advantages-item__title {
     font-size: 24px;
     margin-bottom: 15px;
     font-family: 'Gilroy Semibold';
@@ -479,6 +492,7 @@ body {
     background-image: url(../img/maps.png);
     background-repeat: no-repeat;
     height: 400px;
+    background-size: cover;
 }
 
 .footer__socials {
@@ -537,4 +551,247 @@ body {
 
 .footer-social__link {
     color: #000;
+}
+
+@media (max-width: 1440px) {
+    .header__main .container {
+        padding-top: 50px;
+        padding-left: 140px;
+    }
+
+    .header-main__title {
+        margin-bottom: 0;
+    }
+
+    .header-main__title span {
+        font-size: 70px;
+        margin-top: 16px;
+    }
+
+    .header__main::before {
+        min-height: 0;
+    }
+
+    .footer__socials::after {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 97%;
+    }
+
+    .header__logo {
+        margin-right: 50px;
+    }
+
+    .header__btn {
+        padding: 5px 25px;
+    }
+
+    .header__main .container {
+        padding-left: 90px;
+    }
+
+    .hero__left {
+        margin: 0 auto;
+    }
+
+    .hero__title {
+        text-align: center;
+    }
+
+    .advantages__item {
+        margin-bottom: 50px;
+    }
+
+    .footer__socials {
+        margin-left: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__logo {
+        width: 110px;
+    }
+
+    .header__address {
+        font-size: 14px;
+    }
+
+    .header__btn {
+        padding: 10px 6px;
+        font-size: 14px;
+    }
+
+    .header-social__number {
+        font-size: 15px;
+    }
+
+    .header-nav__menu li a {
+        font-size: 15px;
+    }
+
+    .header__main .container {
+        padding-left: 20px;
+    }
+
+    .header-main__title {
+        font-size: 24px;
+    }
+
+    .header-main__title span {
+        font-size: 48px;
+        margin-top: 4px;
+        line-height: 1;
+    }
+
+    .header-main__description {
+        font-size: 16px;
+    }
+
+    .header__main::before {
+        background-size: auto;
+    }
+
+    .hero {
+        padding-top: 50px;
+    }
+
+    .about__description {
+        font-size: 18px;
+    }
+
+    .footer__social {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header__top .container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .header__logo {
+        margin-bottom: 25px;
+    }
+
+    .header__address {
+        margin-bottom: 20px;
+    }
+
+    .header__main::before {
+        background-image: none;
+    }
+
+    .header-main__title {
+        text-align: center;
+    }
+
+    .header-main__description {
+        text-align: center;
+    }
+
+    .header-main__title span {
+        margin-top: -10px;
+    }
+
+    .header-nav__menu li a {
+        font-size: 18px;
+    }
+
+    .advantages-item__img {
+        margin-bottom: 30px;
+    }
+
+    .hero__left {
+        max-width: 90%;
+    }
+
+    .advantages-item__title {
+        font-size: 16px;
+    }
+
+    .advantages-item__description {
+        font-size: 15px;
+    }
+
+    .advantages {
+        padding-bottom: 0;
+    }
+
+    .about-product__main {
+        flex-direction: column;
+    }
+
+    .about-product__description {
+        margin-bottom: 10px;
+    }
+
+    .about-product__items {
+        flex-direction: row;
+    }
+
+    .about__description {
+        font-size: 15px;
+    }
+
+    .news {
+        padding-top: 0;
+    }
+
+    .news__title {
+        margin-bottom: 25px;
+    }
+
+    .news__items {
+        gap: 20px;
+    }
+
+    .news__item {
+        flex: 0 0 100%;
+    }
+
+    .footer__maps {
+        display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .header__top .container {
+        justify-content: center;
+        margin-right: 0;
+        gap: 10px;
+    }
+
+    .header__address::before {
+        display: none;
+    }
+
+    .header-main__title span {
+        margin-top: 0;
+        font-size: 36px;
+    }
+
+    .header-main__title {
+        line-height: 1;
+    }
+
+    .advantages__item {
+        flex: 100%;
+    }
+
+    .about {
+        margin-bottom: 20px;
+    }
+
+    .about__description {
+        padding-bottom: 10px;
+    }
+
+    .footer__social {
+        font-size: 12px;
+    }
 }
