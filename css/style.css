@@ -72,6 +72,10 @@ body {
     margin: 0 auto;
 }
 
+.hide {
+    display: none;
+}
+
 .title {
     font-family: 'Gilroy Semibold';
 }
@@ -191,7 +195,7 @@ body {
 .header__main::before {
     content: ' ';
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -204,6 +208,29 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     transform: scaleX(-1);
+}
+
+.header__main-2 {
+    position: relative;
+    min-height: 115px;
+    padding-top: 28px;
+    padding-bottom: 30px;
+}
+
+.header__main-2::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(../img/header__bg2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header__main .container {
@@ -230,6 +257,13 @@ body {
     font-size: 57.53px;
 }
 
+.header-main__title-2 {
+    font-family: 'Gilroy Semibold';
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
 .header-main__title span {
     font-size: 86.46px;
     display: block;
@@ -242,6 +276,31 @@ body {
     font-family: 'MYRIADPRO-REGULAR';
     text-transform: uppercase;
     margin-left: 4px;
+}
+
+.header-main__description-2 {
+    font-size: 15px;
+    font-family: 'Gilroy Regular';
+}
+
+.header__breadcrumb {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 12px 0;
+    font-size: 11px;
+}
+
+.header__breadcrumb ul {
+    display: flex;
+}
+
+.header__breadcrumb li+li::before {
+    content: "/";
+    margin: 0 .5rem;
+    color: #000;
+}
+
+.header__breadcrumb li>a:visited {
+    color: #000;
 }
 
 .hero {
